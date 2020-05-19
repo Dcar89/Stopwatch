@@ -25,7 +25,7 @@ export function Stopwatch() {
   };
 
   const onLap = () => {
-    setTimes([...times, timer]);
+    setTimes([timer, ...times]);
     setTimer(0);
   };
   
