@@ -28,6 +28,10 @@ export function Stopwatch() {
     setTimes([...times, timer]);
     setTimer(0);
   };
+  
+  const onClear = () => {
+    setTimes([]);
+  };
 
   return (
     <div>
@@ -37,6 +41,7 @@ export function Stopwatch() {
         <button onClick={onStop}>STOP</button>
         <button onClick={onLap}>LAP</button>
         <button onClick={onReset}>RESET</button>
+        <button onClick={onClear}>CLEAR</button>
       </div>
       <div>
         {times.map((time, index) => (
